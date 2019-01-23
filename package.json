@@ -1,0 +1,27 @@
+{
+  "name": "eslint-plugin-bayzat",
+  "version": "0.0.1",
+  "description": "ESLint plugin with custom rules we use at Bayzat",
+  "keywords": [
+    "eslint",
+    "eslintplugin",
+    "eslint-plugin"
+  ],
+  "author": "Jiří Prokop <jiri@bayzat.com>",
+  "main": "lib/index.js",
+  "scripts": {
+    "test": "mocha tests --recursive"
+  },
+  "dependencies": {
+    "requireindex": "~1.2.0"
+  },
+  "devDependencies": {
+    "eslint": "^5.12.1",
+    "mocha": "^5.2.0"
+  },
+  "engines": {
+    "node": ">= 10.*",
+    "yarn": ">= 1.13.0"
+  },
+	"license": "MIT"
+}

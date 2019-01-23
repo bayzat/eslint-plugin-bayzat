@@ -1,0 +1,4 @@
+# do not add any paths here!
+# this file was created to specifically enforce linting of eslint config file itself
+# http://eslint.org/docs/user-guide/configuring#ignoring-files-and-directories
+!.eslintrc.js
