@@ -13,6 +13,7 @@ Examples of **incorrect** code for this rule:
 
 const { prop1, prop2 } = getProperties(object, 'prop1', 'prop2')
 const { prop1, prop2 } = object.getProperties('prop1', 'prop2')
+const { prop1, prop2 } = this.getProperties('prop1', 'prop2')
 ```
 
 Examples of **correct** code for this rule:
@@ -20,6 +21,13 @@ Examples of **correct** code for this rule:
 ```js
 /*eslint no-get-properties-for-flat-props: "error"*/
 
-const { prop1, prop2 } = getProperties(object, 'nested.prop1', 'prop2')
-const { prop1, prop2 } = object.getProperties('prop1', 'nested.prop2')
+const { prop1, prop2 } = object
+const { prop1, prop2 } = this
+
+// also accepted because it's not possible to transform nested props
+const { 'nested.prop1': nestedProp1, prop2 } = getProperties(object, 'nested.prop1', 'prop2')
+const { prop1, 'nested.prop2': nestedProp2 } = object.getProperties('prop1', 'nested.prop2')
 ```
+
+**Note: there is an assumption that `getProperties` function is always imported from `@ember/object`**
+**Note: after applying this rule with `--fix` the file can end up being invalid because of unused import of `getProperties`; to avoid introduction of complexity into the rule, this has to be fixed manually**

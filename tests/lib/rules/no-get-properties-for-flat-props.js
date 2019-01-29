@@ -15,6 +15,8 @@ ruleTester.run('no-get-properties-for-flat-props', rule, {
         code: 'const { prop1 } = this.getProperties()'
     }, {
         code: 'const props = this.getProperties(\'prop1\', \'prop2\')'
+    }, {
+        code: 'const { \'order.id\': orderId, prop2 } = getProperties(object, \'order.id\', \'prop2\')'
     }],
 
     invalid: [{
@@ -31,6 +33,13 @@ ruleTester.run('no-get-properties-for-flat-props', rule, {
             type: 'VariableDeclarator'
         }],
         output: 'const { prop1, prop2 } = this'
+    }, {
+        code: 'const { \'dashed-prop1\': dashedProp1, \'dashed-prop2\': dashedProp2 } = this.getProperties(\'dashed-prop1\', \'dashed-prop2\')',
+        errors: [{
+            message: 'Use of getProperties can be replaced by destructuring.',
+            type: 'VariableDeclarator'
+        }],
+        output: 'const { \'dashed-prop1\': dashedProp1, \'dashed-prop2\': dashedProp2 } = this'
     }, {
         code: `
 const {

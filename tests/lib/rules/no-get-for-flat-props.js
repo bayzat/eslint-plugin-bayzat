@@ -25,6 +25,10 @@ ruleTester.run('no-get-for-flat-props', rule, {
         code: 'this.get(\'something\', \'anything\')'
     }, {
         code: 'this.get(\'nested.prop.erty\')'
+    }, {
+        code: 'get(object, \'long-dashed-property\')'
+    }, {
+        code: 'this.get(\'long-dashed-property\')'
     }],
 
     invalid: [{

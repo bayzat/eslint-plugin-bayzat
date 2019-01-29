@@ -819,6 +819,11 @@ type-check@~0.3.2:
   dependencies:
     prelude-ls "~1.1.2"
 
+unquoted-property-validator@^1.0.2:
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/unquoted-property-validator/-/unquoted-property-validator-1.0.2.tgz#edd75c6a4481fbbc094b3b4c35035863df6bbcef"
+  integrity sha512-LokWcfN2q9UnQTTIpRkTZNsLVVO2KaXeO3oUMQ7JShGhMdO8P+zN1MfrPMf1IwR/Cyh283lGaxbRcNGyq2IXYQ==
+
 uri-js@^4.2.2:
   version "4.2.2"
   resolved "https://registry.yarnpkg.com/uri-js/-/uri-js-4.2.2.tgz#94c540e1ff772956e2299507c010aea6c8838eb0"

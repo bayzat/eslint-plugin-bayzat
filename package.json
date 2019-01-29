@@ -9,11 +9,23 @@
   ],
   "author": "Jiří Prokop <jiri@bayzat.com>",
   "main": "lib/index.js",
+  "files": [
+    "lib"
+  ],
+  "directories": {
+    "rules": "rules",
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bayzat/eslint-plugin-bayzat.git"
+  },
   "scripts": {
     "test": "mocha tests --recursive"
   },
   "dependencies": {
-    "requireindex": "~1.2.0"
+    "requireindex": "~1.2.0",
+    "unquoted-property-validator": "^1.0.2"
   },
   "devDependencies": {
     "eslint": "^5.12.1",
@@ -23,5 +35,5 @@
     "node": ">= 10.*",
     "yarn": ">= 1.13.0"
   },
-	"license": "MIT"
+  "license": "MIT"
 }
