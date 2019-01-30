@@ -46,3 +46,4 @@ Then configure the rules you want to use under the rules section.
 - [no-jquery](docs/rules/no-jquery.md)
 - [no-get-for-flat-props](docs/rules/no-get-for-flat-props.md)
 - [no-get-properties-for-flat-props](docs/rules/no-get-properties-for-flat-props.md)
+- [no-get-properties-with-array](docs/rules/no-get-properties-with-array.md)
