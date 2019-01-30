@@ -31,3 +31,4 @@ const { prop1, 'nested.prop2': nestedProp2 } = object.getProperties('prop1', 'ne
 
 **Note: there is an assumption that `getProperties` function is always imported from `@ember/object`**
 **Note: after applying this rule with `--fix` the file can end up being invalid because of unused import of `getProperties`; to avoid introduction of complexity into the rule, this has to be fixed manually**
+**Note: this rule cannot be applied in case your code uses Ember Data or Ember proxies as they require usage of `getProperties`**

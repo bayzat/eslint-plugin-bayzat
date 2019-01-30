@@ -45,5 +45,19 @@ ruleTester.run('no-get-for-flat-props', rule, {
             type: 'CallExpression'
         }],
         output: 'this.property'
+    }, {
+        code: 'this.get(\'property\')',
+        errors: [{
+            message: 'Property property can be access directly.',
+            type: 'CallExpression'
+        }],
+        output: 'this.property'
+    }, {
+        code: 'this.object.get(\'property\')',
+        errors: [{
+            message: 'Property property can be access directly.',
+            type: 'CallExpression'
+        }],
+        output: 'this.object.property'
     }]
 })

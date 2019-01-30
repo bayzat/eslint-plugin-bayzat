@@ -33,3 +33,4 @@ object.get('long-dashed-property')
 
 **Note: there is an assumption that `get` function is always imported from `@ember/object`**
 **Note: after applying this rule with `--fix` the file can end up being invalid because of unused import of `get`; to avoid introduction of complexity into the rule, this has to be fixed manually**
+**Note: this rule cannot be applied in case your code uses Ember Data or Ember proxies as they require usage of `get`**
